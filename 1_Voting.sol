@@ -86,11 +86,11 @@ contract voting{
         for(uint8 i=0;i<cand.length;i++){
             uint8 counter =0;
             for(uint8 j=0;j<cand.length;j++){
-                if(cand[i].votes>cand[j].votes){
+                if(cand[i].votes>=cand[j].votes){
                     counter++;
                 }
              }
-             if(counter == (cand.length-1)){
+             if(counter == cand.length){
                 return cand[i];
             }
         }
